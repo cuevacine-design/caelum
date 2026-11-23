@@ -1,0 +1,265 @@
+@font-face {
+  font-family: "Lexend";
+  src: url("letra/lexend.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --tinta: #1c1c1c;
+  --tinta-suave: #4d5963;
+  --fondo: #ffffff;
+  --fondo-suave: #f3f8fa;
+  --cielo: #59a7bd;
+  --cielo-hondo: #2b6f83;
+  --linea: #dfe8ec;
+  --ancho: 68rem;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--tinta);
+  font-family: "Lexend", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--cielo-hondo);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--tinta);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--cielo-hondo);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+strong {
+  font-weight: 500;
+}
+
+/* Portada */
+
+.portada {
+  padding: clamp(2.5rem, 8vw, 5.5rem) 1rem clamp(1.75rem, 4vw, 2.75rem);
+  text-align: center;
+}
+
+.portada h1 {
+  margin: 0;
+}
+
+.logo {
+  width: min(22rem, 78vw);
+  margin: 0 auto;
+}
+
+.lema {
+  width: min(14rem, 54vw);
+  margin: 0.9rem auto 0;
+}
+
+main {
+  max-width: var(--ancho);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.intro {
+  max-width: 38rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bajada {
+  margin: 0 0 0.8rem;
+  font-size: clamp(1.2rem, 2.4vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.45;
+  text-wrap: balance;
+}
+
+.intro p:last-child {
+  margin: 0;
+  color: var(--tinta-suave);
+}
+
+/* Fotos */
+
+.fotos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.fotos figure {
+  margin: 0;
+}
+
+.fotos img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+@media (max-width: 720px) {
+  .fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Servicios */
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.75rem, 4vw, 3.5rem);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .servicios {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rotulo {
+  margin: 0 0 0.6rem;
+  color: var(--cielo-hondo);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.servicios p {
+  margin: 0 0 1rem;
+}
+
+.servicios ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--linea);
+}
+
+.servicios li {
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--linea);
+}
+
+/* Herramienta interna */
+
+.interna {
+  max-width: 52rem;
+  margin: clamp(3rem, 7vw, 4.5rem) auto 0;
+  padding: 1.5rem;
+  background: var(--fondo-suave);
+  border-radius: 6px;
+}
+
+.interna p {
+  margin: 0 0 0.6rem;
+  color: var(--tinta-suave);
+}
+
+.interna p:last-child {
+  margin: 0;
+}
+
+/* Pie */
+
+.pie {
+  max-width: var(--ancho);
+  margin: clamp(3rem, 7vw, 5rem) auto 0;
+  padding: 1.5rem 1rem 2.5rem;
+  border-top: 1px solid var(--linea);
+  color: var(--tinta-suave);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Documento (privacidad) */
+
+.cabecera {
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.cabecera img {
+  width: min(13rem, 60vw);
+  margin: 0 auto;
+}
+
+.documento {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.documento h1 {
+  margin: 0 0 0.35rem;
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.fecha {
+  margin: 0 0 2rem;
+  color: var(--tinta-suave);
+}
+
+.documento h2 {
+  margin: 2.4rem 0 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.documento h3 {
+  margin: 1.6rem 0 0.35rem;
+  color: var(--cielo-hondo);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.documento p,
+.documento ul {
+  margin: 0 0 0.9rem;
+}
+
+.documento ul {
+  padding-left: 1.2rem;
+}
+
+.documento li {
+  margin-bottom: 0.35rem;
+}
